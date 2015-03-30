@@ -16,8 +16,11 @@ DB_PASS=mysql
 VOLUME_DATA=$HOME/appstore/tfs/mysql/data
 #####################################################################################
 
-. $TFS_HOME/conf/mysql
 VERSION=${VERSION:-"latest"};
+if [ $# -lt 1 ]; then
+    echo "Usage: tfs-mysql run|start|stop|clean";
+    exit 0;
+fi
 
 # 启动
 function start_docker {
