@@ -8,7 +8,7 @@ GATEWAY=172.17.42.1
 VERSION=
 
 # create user/pass && db
-DB_NAME=redmine_production,archiva_production
+DB_NAME=redmine_production,gitlab_ci_production,archiva_production
 DB_USER=mysql
 DB_PASS=mysql
 
